@@ -1,0 +1,14 @@
+node_modules/
+cypress/videos/
+cypress/screenshots/
+.env
+.DS_Store
+Thumbs.db
+npm-debug.log*
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
