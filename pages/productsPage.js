@@ -8,10 +8,10 @@ class ProductsPage {
     this.productNames = page.locator('.inventory_item_name');
 
     // Sorting
-    this.sortDropdown = page.locator('.product_sort_container');
+    this.sortDropdown = page.getByTestId('product-sort-container');
 
     // Cart
-    this.cartLink = page.getByTestId('shopping-cart-link');
+    this.cartLink = page.locator('.shopping_cart_link');
     this.cartBadge = page.locator('.shopping_cart_badge');
   }
 
@@ -28,7 +28,9 @@ class ProductsPage {
       hasText: productName,
     });
 
-    await product.getByRole('button', { name: 'Add to cart' }).click();
+    await product
+      .getByRole('button', { name: 'Add to cart' })
+      .click();
   }
 
   async removeProductFromCart(productName) {
@@ -36,7 +38,9 @@ class ProductsPage {
       hasText: productName,
     });
 
-    await product.getByRole('button', { name: 'Remove' }).click();
+    await product
+      .getByRole('button', { name: 'Remove' })
+      .click();
   }
 
   async selectSort(option) {
