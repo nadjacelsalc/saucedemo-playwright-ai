@@ -12,3 +12,7 @@ npm-debug.log*
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+node_modules/
+test-results/
+playwright-report/
+blob-report/
