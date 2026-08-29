@@ -8,7 +8,8 @@ class ProductsPage {
     this.productNames = page.locator('.inventory_item_name');
 
     // Sorting
-    this.sortDropdown = page.getByTestId('product-sort-container');
+    //this.sortDropdown = page.getByTestId('product-sort-container');
+    this.sortDropdown = page.getByRole('combobox');
 
     // Cart
     this.cartLink = page.locator('.shopping_cart_link');
