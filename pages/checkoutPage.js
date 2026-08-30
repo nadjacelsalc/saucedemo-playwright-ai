@@ -47,6 +47,18 @@ this.postalCodeInput = page.locator('[data-test="postalCode"]');
   getError() {
     return this.errorMessage;
   }
+
+  getFirstName() {
+  return this.firstNameInput;
+}
+
+getLastName() {
+  return this.lastNameInput;
+}
+
+getPostalCode() {
+  return this.postalCodeInput;
+}
 }
 
 export default CheckoutPage;
